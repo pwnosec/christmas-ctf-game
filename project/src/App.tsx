@@ -3,6 +3,7 @@ import GameBoard from './components/GameBoard';
 import Navbar from './components/Navbar';
 import Modal from './components/Modal';
 import WelcomeTutorial from './components/WelcomeTutorial';
+import BackgroundMusic from './components/BackgroundMusic';
 
 export default function App() {
   const [showTutorial, setShowTutorial] = useState(true);
@@ -14,6 +15,7 @@ export default function App() {
       
       <div className="relative">
         <Navbar score={score} />
+        <BackgroundMusic />
         
         {showTutorial && (
           <Modal onClose={() => setShowTutorial(false)}>
